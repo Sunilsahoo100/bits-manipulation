@@ -1,0 +1,23 @@
+https://www.geeksforgeeks.org/calculate-square-of-a-number-without-using-and-pow/
+//n<<3=n*(2^3)
+//n(100110)=n(2^5+2^2+2^1)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    int x,sum=0;
+    cin>>x;
+    
+    for(int i=0;i<32;i++)
+    {
+        if(x & (1<<i))
+        {
+            sum=sum+(x<<i);
+        }
+    }
+    cout<<sum;
+    
+	// your code goes here
+	return 0;
+}
